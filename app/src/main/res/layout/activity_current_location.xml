@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/card_bg"
+    android:outlineSpotShadowColor="#919294"
+    tools:context=".CurrentLocation">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/card_bg" />
+
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:fontFamily="serif"
+            android:textColor="@android:color/white"
+            android:text="Current Location"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/latitudeTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="serif"
+        android:layout_marginStart="10dp"
+        android:text="Latitude: "
+        android:textColor="@android:color/white"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <TextView
+        android:id="@+id/longitudeTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="serif"
+        android:text="Longitude: "
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold|italic"
+        android:layout_marginStart="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/latitudeTxt"
+        app:layout_constraintStart_toStartOf="@+id/latitudeTxt"
+        app:layout_constraintTop_toBottomOf="@+id/latitudeTxt" />
+
+    <TextView
+        android:id="@+id/altitudeTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Altitude: "
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="@+id/accuracyTxt"
+        app:layout_constraintStart_toStartOf="@+id/accuracyTxt"
+        app:layout_constraintTop_toBottomOf="@+id/accuracyTxt" />
+
+    <TextView
+        android:id="@+id/accuracyTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Accuracy: "
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="@+id/longitudeTxt"
+        app:layout_constraintStart_toStartOf="@+id/longitudeTxt"
+        app:layout_constraintTop_toBottomOf="@+id/longitudeTxt" />
+
+    <TextView
+        android:id="@+id/speedTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Speed: "
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold|italic"
+        android:layout_marginStart="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/altitudeTxt"
+        app:layout_constraintStart_toStartOf="@+id/altitudeTxt"
+        app:layout_constraintTop_toBottomOf="@+id/altitudeTxt" />
+
+    <TextView
+        android:id="@+id/addressTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="serif"
+        android:layout_marginStart="10dp"
+        android:text="Address: "
+        android:textColor="@android:color/white"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="@+id/speedTxt"
+        app:layout_constraintTop_toBottomOf="@+id/speedTxt" />
+
+    <Switch
+        android:id="@+id/locationSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="serif"
+        android:layout_marginStart="10dp"
+        android:text="Auto Location Update"
+        android:textColor="@android:color/white"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addressTxt" />
+
+    <TextView
+        android:id="@+id/trackingStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Tracking status"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold|italic"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locationSwitch" />
+
+    <Switch
+        android:id="@+id/gpsSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="GPS/Save Power"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trackingStatus" />
+
+    <TextView
+        android:id="@+id/sensorTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="serif"
+        android:text="Sensor: Using Tower + Wifi"
+        android:textColor="@android:color/white"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gpsSwitch" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/showMapBtn"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sensorTxt" >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/button_bg"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/baseline_pin_drop_24"
+            android:padding="6dp"/>
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Show in map"
+            android:textColor="@color/white"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="15dp"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            android:fontFamily="serif"/>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

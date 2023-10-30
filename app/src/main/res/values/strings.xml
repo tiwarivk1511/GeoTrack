@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GeoTrack</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name='map_api'>AIzaSyADT35lLpUitbKN6T8bq5a6HvVV6grk2Ss</string>
+    <string name="title_activity_maps_direction">MapsDirectionActivity</string>
+    <string name="title_activity_search_maps">SearchMaps</string>
+</resources>
