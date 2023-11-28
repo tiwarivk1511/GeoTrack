@@ -144,18 +144,6 @@ public class MapsDirectionActivity extends FragmentActivity implements OnMapRead
         return null;
     }
 
-    private void drawDrivingRoute(List<LatLng> routePoints) {
-        // Define the polyline options
-        PolylineOptions options = new PolylineOptions();
-        options.addAll(routePoints);
-        options.width(10); // Line width
-        options.color(getResources().getColor(R.color.primary_Dark)); // Line color
-
-        // Add the polyline to the map
-        routeLines.add(mMap.addPolyline(options));
-    }
-
-
     private void drawRoutes() {
         // Iterate through the routes and draw them on the map
         for (int i = 0; i < routeStarts.size(); i++) {
